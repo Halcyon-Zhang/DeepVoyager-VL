@@ -1,0 +1,4 @@
+# One SSH target per line. The first host is the rendezvous master.
+192.0.2.10
+192.0.2.11
+
