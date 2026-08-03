@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title">
+  <title id="title">arXiv</title>
+  <path
+    d="M122 46 69 99"
+    fill="none"
+    stroke="#b8b8b5"
+    stroke-width="15"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M33 28 103 100 49 160"
+    fill="none"
+    stroke="#b31b34"
+    stroke-width="15"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="m69 99 75 78"
+    fill="none"
+    stroke="#b8b8b5"
+    stroke-width="15"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
