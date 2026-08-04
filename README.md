@@ -19,7 +19,7 @@ the agent searches next.
 
 ## 🔔 News
 
-- 🚀**[2026-08]** We released the [DeepVoyager-VL paper](https://arxiv.org/abs/2608.01827), [project page](https://halcyon-zhang.github.io/DeepVoyager-VL/), and the reproducible Megatron SFT training bundle.
+- 🚀 **[2026-08]** We released the [DeepVoyager-VL paper](https://arxiv.org/abs/2608.01827), [project page](https://halcyon-zhang.github.io/DeepVoyager-VL/), and the reproducible Megatron SFT training bundle.
 
 ## ✨ Highlights
 
