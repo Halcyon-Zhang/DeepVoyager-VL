@@ -12,20 +12,23 @@ the agent searches next.
 [![Project Page](https://img.shields.io/badge/Project-Page-3b82f6.svg)](https://halcyon-zhang.github.io/DeepVoyager-VL/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-🤗 EventVoyage-VL *(coming soon)* &nbsp;|&nbsp;
-🤗 DeepVoyager-VL-8B *(coming soon)* &nbsp;|&nbsp;
-🤗 DeepVoyager-VL-30B-A3B *(coming soon)*
+<p>
+  <a href="https://huggingface.co/datasets/Halcyon-Zhang/EventVoyage-VL">
+    <img src="https://img.shields.io/badge/Dataset-EventVoyage--VL-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="EventVoyage-VL dataset">
+  </a>
+  <a href="https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-8B">
+    <img src="https://img.shields.io/badge/Model-DeepVoyager--VL--8B-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="DeepVoyager-VL-8B model">
+  </a>
+  <a href="https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-30B-A3B">
+    <img src="https://img.shields.io/badge/Model-DeepVoyager--VL--30B--A3B-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="DeepVoyager-VL-30B-A3B model">
+  </a>
+</p>
 
 </div>
 
 ## News
 
 - **[2026/08/03]** We released the [DeepVoyager-VL paper](https://arxiv.org/abs/2608.01827), [project page](https://halcyon-zhang.github.io/DeepVoyager-VL/), and the reproducible Megatron SFT training bundle.
-
-> [!NOTE]
-> This repository currently contains the supervised fine-tuning stack and
-> sanitized launch configurations. EventVoyage-VL data, model checkpoints, and
-> additional agent components will be released separately.
 
 ## Highlights
 
