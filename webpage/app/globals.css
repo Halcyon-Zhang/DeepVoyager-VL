@@ -498,11 +498,19 @@ h2 {
   font-weight: 750;
 }
 .paper-table .ours-row th:first-child { background: #deeeff; }
+.benchmark-table .ours-row > * { font-weight: 400; }
+.benchmark-table .ours-row th:first-child { font-weight: 750; }
+.paper-table td.best-result { color: #173b63; font-weight: 800; }
+.paper-table td.second-result {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
 .framework-table th:first-child { min-width: 190px; }
 .framework-table th:nth-child(2) { min-width: 225px; text-align: left; }
 .framework-table tbody th[rowspan] { vertical-align: top; padding-top: 14px; color: var(--navy); }
 .compact-table thead th { font-size: 11px; }
-.compact-table th:first-child { width: 50%; min-width: 0; }
+.compact-table th:first-child { width: 40%; min-width: 0; }
 .data-card figcaption {
   padding: 16px 4px 0;
   color: #687b8c;
@@ -529,19 +537,26 @@ h2 {
 .insight-grid {
   margin-top: 54px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 .insight-grid article {
   min-height: 238px;
   padding: 23px 22px;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(172, 196, 214, .82);
+  border: 1px solid rgba(178, 199, 216, .82);
   border-radius: 18px;
-  background: rgba(255, 255, 255, .72);
+  background: rgba(255, 255, 255, .78);
 }
-.insight-grid article:nth-child(2), .insight-grid article:nth-child(4) { background: rgba(238, 247, 255, .8); }
+.insight-grid article:nth-child(2) {
+  border-color: rgba(174, 199, 222, .84);
+  background: rgba(235, 244, 255, .84);
+}
+.insight-grid article:nth-child(3) {
+  border-color: rgba(190, 197, 222, .86);
+  background: rgba(241, 242, 252, .88);
+}
 .insight-grid span {
   display: flex;
   align-items: center;
@@ -656,7 +671,6 @@ footer { padding: 40px 0 22px; border-top: 1px solid #c8d7e2; background: #e9f1f
   .paper-section { padding-block: 80px; }
   .section-intro, .compact-intro, .bibtex-layout { grid-template-columns: 1fr; gap: 32px; }
   .ablation-grid { grid-template-columns: 1fr; }
-  .insight-grid { grid-template-columns: repeat(2, 1fr); }
   .analysis-grid { grid-template-columns: 1fr; }
   .bibtex-layout { align-items: start; }
 }

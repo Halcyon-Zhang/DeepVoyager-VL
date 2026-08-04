@@ -11,7 +11,7 @@ import institute3Logo from "./images/logo/institute3-mark.png";
 import institute4Logo from "./images/logo/institute4-mark.png";
 import institute5Logo from "./images/logo/institute5-mark.png";
 import institute6Logo from "./images/logo/institute6-flower.png";
-import overviewFigure from "./images/paper/figure-overview.webp";
+import overviewFigure from "./images/paper/figure-overview.png";
 import paradigmsFigure from "./images/paper/figure-paradigms.webp";
 import toolUsageFigure from "./images/paper/figure-tool-usage.webp";
 import turnDistributionFigure from "./images/paper/figure-turn-distribution.webp";
@@ -40,8 +40,8 @@ const affiliations = [
   { id: "1", name: "Peking University", label: "Peking University", logo: institute1Logo },
   { id: "2", name: "HKUST (Guangzhou)", label: "HKUST (GZ)", logo: institute2Logo },
   { id: "3", name: "National University of Defense Technology", label: "NUDT", logo: institute3Logo },
-  { id: "4", name: "Ocean University of China", label: "Ocean University", logo: institute4Logo },
-  { id: "5", name: "Harbin Institute of Technology, Shenzhen", label: "HIT Shenzhen", logo: institute5Logo },
+  { id: "4", name: "Ocean University of China", label: "OUC", logo: institute4Logo },
+  { id: "5", name: "Harbin Institute of Technology, Shenzhen", label: "HITSZ", logo: institute5Logo },
   { id: "6", name: "Huawei Cloud BU", label: "Huawei Cloud BU", logo: institute6Logo },
 ];
 
@@ -209,6 +209,11 @@ function SectionNavigation({ active, visible }: { active: string; visible: boole
   );
 }
 
+function getNumericScore(value: string) {
+  const scores = value.match(/\d+(?:\.\d+)?/g)?.map(Number) ?? [];
+  return scores.length ? Math.max(...scores) : null;
+}
+
 function BenchmarkTable() {
   return (
     <figure className="data-card data-card-wide" data-reveal="scale">
@@ -227,19 +232,37 @@ function BenchmarkTable() {
             </tr>
           </thead>
           <tbody>
-            {benchmarkGroups.map((group) => (
-              <Fragment key={group.label}>
-                <tr className="table-group">
-                  <th colSpan={benchmarkColumns.length + 1}>{group.label}</th>
-                </tr>
-                {group.rows.map((row) => (
-                  <tr className={row.ours ? "ours-row" : ""} key={`${group.label}-${row.name}`}>
-                    <th>{row.name}</th>
-                    {row.values.map((value, index) => <td key={`${row.name}-${index}`}>{value}</td>)}
+            {benchmarkGroups.map((group) => {
+              const rankings = benchmarkColumns.map((_, columnIndex) => {
+                const scores = group.rows
+                  .map((row) => getNumericScore(row.values[columnIndex]))
+                  .filter((score): score is number => score !== null);
+                const uniqueScores = [...new Set(scores)].sort((a, b) => b - a);
+                return { best: uniqueScores[0], second: uniqueScores[1] };
+              });
+
+              return (
+                <Fragment key={group.label}>
+                  <tr className="table-group">
+                    <th colSpan={benchmarkColumns.length + 1}>{group.label}</th>
                   </tr>
-                ))}
-              </Fragment>
-            ))}
+                  {group.rows.map((row) => (
+                    <tr className={row.ours ? "ours-row" : ""} key={`${group.label}-${row.name}`}>
+                      <th>{row.name}</th>
+                      {row.values.map((value, index) => {
+                        const score = getNumericScore(value);
+                        const className = score === rankings[index].best
+                          ? "best-result"
+                          : score === rankings[index].second
+                            ? "second-result"
+                            : undefined;
+                        return <td className={className} key={`${row.name}-${index}`}>{value}</td>;
+                      })}
+                    </tr>
+                  ))}
+                </Fragment>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -645,16 +668,11 @@ export default function Home() {
               <p>of tool calls are visual, versus 40.6%, 30.3%, and 10.1% in three public datasets.</p>
             </article>
             <article data-reveal="up" data-reveal-delay="1">
-              <span>Interaction horizon</span>
-              <strong>16–20</strong>
-              <p>turns is the peak interval for our trajectories; existing datasets peak within 1–10 turns.</p>
-            </article>
-            <article data-reveal="up" data-reveal-delay="2">
               <span>VIL trajectory gain</span>
               <strong>+6.5</strong>
               <p>average points from 7K VIL trajectories on the 30B model, beyond a strong 20K mixture.</p>
             </article>
-            <article data-reveal="up" data-reveal-delay="3">
+            <article data-reveal="up" data-reveal-delay="2">
               <span>Training recipe</span>
               <strong>SFT only</strong>
               <p>achieves 54.8 and 58.6 average scores without an additional reinforcement-learning stage.</p>
