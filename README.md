@@ -17,31 +17,28 @@ the agent searches next.
 
 </div>
 
-## News
+## 🔔 News
 
-- **[2026/08/03]** We released the [DeepVoyager-VL paper](https://arxiv.org/abs/2608.01827), [project page](https://halcyon-zhang.github.io/DeepVoyager-VL/), and the reproducible Megatron SFT training bundle.
+- 🚀**[2026-08]** We released the [DeepVoyager-VL paper](https://arxiv.org/abs/2608.01827), [project page](https://halcyon-zhang.github.io/DeepVoyager-VL/), and the reproducible Megatron SFT training bundle.
 
-## Highlights
+## ✨ Highlights
 
-- **Vision in the loop.** Visual evidence acquired during search resolves
-  intermediate variables and directly drives later retrieval actions.
-- **EventVoyage-VL.** A structure-before-language synthesis pipeline built on a
-  visually enriched multimodal event graph creates long-horizon questions with
-  explicit intermediate visual dependencies.
-- **Active visual acquisition.** The agent separates image discovery from
-  observation, loading or cropping only the evidence needed at each step.
-- **SFT only.** DeepVoyager-VL learns long-horizon search behavior from curated
-  trajectories without an additional reinforcement-learning stage.
-- **Strong multimodal search performance.** DeepVoyager-VL is evaluated across
-  ten multimodal information-seeking benchmarks.
+- **Vision in the loop.** Newly acquired visual evidence directly guides
+  subsequent retrieval, with images loaded or cropped only when needed.
+- **EventVoyage-VL.** A structure-before-language synthesis pipeline generates
+  long-horizon questions with explicit intermediate visual dependencies.
+- **Supervised-only training.** DeepVoyager-VL learns long-horizon search from
+  curated trajectories without an additional reinforcement-learning stage.
+- **Strong performance.** The 8B and 30B-A3B models achieve average scores of
+  **54.8** and **58.6**, substantially outperforming other multimodal search agents.
 
-## Overview
+## 🧭 Overview
 
 <p align="center">
   <img src="webpage/app/images/paper/figure-paradigms.webp" width="100%" alt="Comparison of multimodal search data synthesis paradigms">
 </p>
 
-<p align="center">
+<p align="left">
   <b>Figure 1.</b> Comparison of multimodal search data synthesis paradigms.
   Prior methods place vision at the input, front-load visual reasoning, or add
   visual evidence near the answer. EventVoyage-VL instead constructs explicit
@@ -52,13 +49,13 @@ the agent searches next.
   <img src="webpage/app/images/paper/figure-overview.png" width="100%" alt="Overview of the DeepVoyager-VL pipeline">
 </p>
 
-<p align="center">
+<p align="left">
   <b>Figure 2.</b> DeepVoyager-VL covers multimodal event-graph construction,
   VQA synthesis, difficulty stratification, trajectory extraction, and
   supervised agent training.
 </p>
 
-## Performance
+## 📊 Performance
 
 DeepVoyager-VL-8B and DeepVoyager-VL-30B-A3B achieve average scores of **54.8**
 and **58.6** across ten benchmarks, leading scale-matched open multimodal
@@ -75,7 +72,7 @@ See the [paper](https://arxiv.org/abs/2608.01827) and
 [project page](https://halcyon-zhang.github.io/DeepVoyager-VL/) for complete
 baseline comparisons and ablation studies.
 
-## Trajectory Analysis
+## 🔍 Trajectory Analysis
 
 <table>
   <tr>
@@ -93,7 +90,7 @@ tool calls, compared with 40.6%, 30.3%, and 10.1% for three public datasets.
 EventVoyage-VL trajectories peak at **16–20 turns**, while the compared datasets
 peak within 1–10 turns.
 
-## Repository Structure
+## 🗂️ Repository Structure
 
 ```text
 DeepVoyager-VL/
@@ -110,7 +107,7 @@ The repository intentionally excludes training samples, model weights,
 checkpoints, logs, caches, host addresses, and credentials. Model, dataset,
 cache, and output paths must point to storage outside this repository.
 
-## Quickstart
+## 🚀 Quickstart
 
 ### 1. Clone and install
 
@@ -229,7 +226,7 @@ Docker defaults to `SWIFT_RUNTIME=installed`. Use
 the bundled source. If JSONL image paths lie outside the model or dataset
 directory, set `MEDIA_ROOT` to their common parent.
 
-## Default Training Configuration
+## ⚙️ Default Training Configuration
 
 | Setting | Default |
 | --- | --- |
@@ -256,7 +253,7 @@ Two runtime modes are supported:
 Do not interchange optimizer states between different runtime stacks without
 first validating compatibility.
 
-## Project Page
+## 🌐 Project Page
 
 The website is a statically exportable Next.js application:
 
@@ -270,7 +267,7 @@ Open [http://localhost:3001](http://localhost:3001). See
 [`webpage/README.md`](webpage/README.md) for static export and GitHub Pages
 deployment instructions.
 
-## Citation
+## 📚 Citation
 
 ```bibtex
 @misc{zhang2026deepvoyagervl,
@@ -287,7 +284,7 @@ deployment instructions.
 }
 ```
 
-## Acknowledgements
+## 🤝 Acknowledgements
 
 This repository builds on
 [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL),
@@ -295,6 +292,6 @@ This repository builds on
 [Megatron-LM](https://github.com/NVIDIA/Megatron-LM), and
 [mbridge](https://github.com/ISEEKYAN/mbridge).
 
-## License
+## ⚖️ License
 
 This project is released under the [MIT License](LICENSE).
