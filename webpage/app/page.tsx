@@ -174,16 +174,14 @@ const frameworkAblationRows: ResultRow[] = [
   { name: "w/o Crop Image", values: ["75.7", "33.0", "36.3", "48.3"] },
 ];
 
-const bibtex = `@misc{zhang2026deepvoyagervl,
-  title        = {DeepVoyager-VL: Incentivizing Vision-in-the-Loop
-                  Search for Long-Horizon Multimodal Agents},
-  author       = {Zhang, Huanyao and Zhou, Jiepeng and Zhao, Runhao
-                  and Shan, Yanzhe and Chen, Jiaoyang and Zhou, Bowen
-                  and Li, Bo and Wang, Fang and Wu, Jialong and Tao, Zhengwei
-                  and Mei, Lang and Yu, Xiaohan and Liu, Liyan
-                  and Chen, Chong and Zhang, Wentao},
-  year         = {2026},
-  note         = {Preprint}
+const bibtex = `@misc{zhang2026deepvoyagervlincentivizingvisionintheloopsearch,
+      title={DeepVoyager-VL: Incentivizing Vision-in-the-Loop Search for Long-Horizon Multimodal Agents}, 
+      author={Huanyao Zhang and Jiepeng Zhou and Runhao Zhao and Yanzhe Shan and Jiaoyang Chen and Bowen Zhou and Bo Li and Fang Wang and Jialong Wu and Zhengwei Tao and Lang Mei and Xiaohan Yu and Liyan Liu and Chong Chen and Wentao Zhang},
+      year={2026},
+      eprint={2608.01827},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2608.01827}, 
 }`;
 
 function SectionNavigation({ active, visible }: { active: string; visible: boolean }) {
@@ -500,10 +498,15 @@ export default function Home() {
         </div>
         <div className="resource-links" data-reveal="up" data-reveal-delay="2">
           <div className="resource-row">
-            <span className="resource primary resource-pending" title="Paper release coming soon">
+            <a
+              className="resource primary"
+              href="https://arxiv.org/abs/2608.01827"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Image className="resource-logo arxiv-logo" src={arxivLogo} alt="" />
               <span><b>Paper</b></span>
-            </span>
+            </a>
             <a className="resource" href={repository} target="_blank" rel="noreferrer">
               <Image className="resource-logo github-resource-logo" src={githubLogo} alt="" />
               <span><b>Code</b></span>
