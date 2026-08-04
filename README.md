@@ -8,24 +8,12 @@ The official repository for **DeepVoyager-VL**, a long-horizon multimodal
 deep-search framework in which newly acquired visual evidence determines what
 the agent searches next.
 
-[![Paper](https://img.shields.io/badge/arXiv-2608.01827-b31b1b.svg)](https://arxiv.org/abs/2608.01827)
-[![Project Page](https://img.shields.io/badge/Project-Page-3b82f6.svg)](https://halcyon-zhang.github.io/DeepVoyager-VL/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-<p>
-  <a href="https://huggingface.co/datasets/Halcyon-Zhang/EventVoyage-VL">
-    🤗 <b>EventVoyage-VL Dataset</b>
-  </a>
-</p>
-<p>
-  <a href="https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-8B">
-    🤗 <b>DeepVoyager-VL-8B</b>
-  </a>
-  &nbsp;&nbsp; | &nbsp;&nbsp;
-  <a href="https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-30B-A3B">
-    🤗 <b>DeepVoyager-VL-30B-A3B</b>
-  </a>
-</p>
+[![Project Page](https://img.shields.io/badge/🌐-Project%20Page-1a73e8)](https://halcyon-zhang.github.io/DeepVoyager-VL/)
+[![Paper](https://img.shields.io/badge/arXiv-2608.01827-b31b1b)](https://arxiv.org/abs/2608.01827)
+[![Dataset](https://img.shields.io/badge/🤗-Dataset-ffcc4d)](https://huggingface.co/datasets/Halcyon-Zhang/EventVoyage-VL)
+[![8B Model](https://img.shields.io/badge/🤗-8B%20Model-2ea44f)](https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-8B)
+[![30B-A3B Model](https://img.shields.io/badge/🤗-30B--A3B%20Model-8250df)](https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-30B-A3B)
+[![Citation](https://img.shields.io/badge/📚-Citation-6f42c1)](#citation)
 
 </div>
 
