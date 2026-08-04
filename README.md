@@ -306,6 +306,8 @@ Two runtime modes are supported:
 Do not interchange optimizer states between different runtime stacks without
 first validating compatibility.
 
+<a id="citation"></a>
+
 ## 📚 Citation
 
 ```bibtex
