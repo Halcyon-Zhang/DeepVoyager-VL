@@ -9,7 +9,7 @@ deep-search framework in which newly acquired visual evidence determines what
 the agent searches next.
 
 [![Project Page](https://img.shields.io/badge/🌐-Project%20Page-1a73e8)](https://halcyon-zhang.github.io/DeepVoyager-VL/)
-[![Paper](https://img.shields.io/badge/%E2%80%8B-2608.01827-b31b1b?logo=arxiv&logoColor=white&labelColor=555)](https://arxiv.org/abs/2608.01827)
+[![Paper](https://img.shields.io/badge/%E2%80%8B-2608.01827-b31b1b?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cGF0aCBkPSJNMTIyIDQ2IDY5IDk5IiBmaWxsPSJub25lIiBzdHJva2U9IiNiOGI4YjUiIHN0cm9rZS13aWR0aD0iMTUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0zMyAyOCAxMDMgMTAwIDQ5IDE2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjMxYjM0IiBzdHJva2Utd2lkdGg9IjE1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJtNjkgOTkgNzUgNzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2I4YjhiNSIgc3Ryb2tlLXdpZHRoPSIxNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8%2BPC9zdmc%2B&labelColor=555)](https://arxiv.org/abs/2608.01827)
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-ffcc4d)](https://huggingface.co/datasets/Halcyon-Zhang/EventVoyage-VL)
 [![8B Model](https://img.shields.io/badge/🤗-8B%20Model-2ea44f)](https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-8B)
 [![30B-A3B Model](https://img.shields.io/badge/🤗-30B--A3B%20Model-8250df)](https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-30B-A3B)
