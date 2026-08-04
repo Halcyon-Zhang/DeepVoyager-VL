@@ -14,13 +14,16 @@ the agent searches next.
 
 <p>
   <a href="https://huggingface.co/datasets/Halcyon-Zhang/EventVoyage-VL">
-    <img src="https://img.shields.io/badge/Dataset-EventVoyage--VL-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="EventVoyage-VL dataset">
+    🤗 <b>EventVoyage-VL Dataset</b>
   </a>
+</p>
+<p>
   <a href="https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-8B">
-    <img src="https://img.shields.io/badge/Model-DeepVoyager--VL--8B-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="DeepVoyager-VL-8B model">
+    🤗 <b>DeepVoyager-VL-8B</b>
   </a>
+  &nbsp;&nbsp; | &nbsp;&nbsp;
   <a href="https://huggingface.co/Halcyon-Zhang/DeepVoyager-VL-30B-A3B">
-    <img src="https://img.shields.io/badge/Model-DeepVoyager--VL--30B--A3B-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="DeepVoyager-VL-30B-A3B model">
+    🤗 <b>DeepVoyager-VL-30B-A3B</b>
   </a>
 </p>
 
