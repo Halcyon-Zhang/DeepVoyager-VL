@@ -17,7 +17,7 @@ the agent searches next.
 
 </div>
 
-## 🔔 News
+## 🔔 Timeline
 
 - 🚀 **[2026-08]** We released the [DeepVoyager-VL paper](https://arxiv.org/abs/2608.01827), [project page](https://halcyon-zhang.github.io/DeepVoyager-VL/), and the reproducible Megatron SFT training bundle.
 
@@ -34,25 +34,40 @@ the agent searches next.
 
 ## 🧭 Overview
 
+### Vision-in-the-Loop Synthesis Paradigm
+
+Existing synthesis paradigms typically confine vision to the beginning or end
+of a reasoning chain. EventVoyage-VL instead makes intermediate visual evidence
+necessary for subsequent retrieval, explicitly supervising vision-in-the-loop
+behavior.
+
 <p align="center">
   <img src="webpage/app/images/paper/figure-paradigms.webp" width="100%" alt="Comparison of multimodal search data synthesis paradigms">
 </p>
 
 <p align="left">
   <b>Figure 1.</b> Comparison of multimodal search data synthesis paradigms.
-  Prior methods place vision at the input, front-load visual reasoning, or add
-  visual evidence near the answer. EventVoyage-VL instead constructs explicit
-  vision-in-the-loop dependencies throughout a long-horizon reasoning chain.
+  Prior methods place vision at the input through entity substitution (a),
+  concentrate visual reasoning before text-based search (b), or graft visual
+  evidence near the answer (c). We instead synthesize vision-in-the-loop
+  questions from a visually enriched multimodal event graph (d), as illustrated
+  by a representative long-horizon example (e).
 </p>
+
+### Data Synthesis and Training Pipeline
+
+Starting from real-world events, the pipeline constructs a visually enriched
+event graph, synthesizes and stratifies questions, extracts validated
+long-horizon trajectories, and distills them into DeepVoyager-VL through SFT.
 
 <p align="center">
   <img src="webpage/app/images/paper/figure-overview.png" width="100%" alt="Overview of the DeepVoyager-VL pipeline">
 </p>
 
 <p align="left">
-  <b>Figure 2.</b> DeepVoyager-VL covers multimodal event-graph construction,
-  VQA synthesis, difficulty stratification, trajectory extraction, and
-  supervised agent training.
+  <b>Figure 2.</b> Overview of DeepVoyager-VL, encompassing vision-in-the-loop
+  data synthesis, difficulty-aware trajectory curation, and supervised agent
+  training.
 </p>
 
 ## 📊 Performance
@@ -252,20 +267,6 @@ Two runtime modes are supported:
 
 Do not interchange optimizer states between different runtime stacks without
 first validating compatibility.
-
-## 🌐 Project Page
-
-The website is a statically exportable Next.js application:
-
-```bash
-cd webpage
-npm ci
-npm run dev -- --port 3001
-```
-
-Open [http://localhost:3001](http://localhost:3001). See
-[`webpage/README.md`](webpage/README.md) for static export and GitHub Pages
-deployment instructions.
 
 ## 📚 Citation
 
